@@ -45,6 +45,9 @@ fetch(api)
                 document.querySelectorAll(".search-item").forEach(el => el.remove())
                 createP("p", "pokemon-title", el.name, pokemonInfo)
                 createP("p", "search-item", `Phrase:  ${phrases[i].quote}`, pokemonInfo)
+                if (el.description) {
+                    createP("p", "search-item", `Description: ${el.description}`, pokemonInfo)
+                }
             })
         });
 
