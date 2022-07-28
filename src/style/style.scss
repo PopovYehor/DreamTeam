@@ -5,14 +5,18 @@
 }
 
 body {
+    height: 100vh;
     background-color: #dec8e7b0;
     font-family: cursive;
+    background: no-repeat url(/src/img/background.jpg);
+    background-size: 100% 100%;
 }
 
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+
 }
 
 .pokemon-item,
@@ -32,14 +36,16 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 15%;
+    width: 10%;
     height: 80%;
     margin: 15px 10px 0 10px;
     padding: 15px 10px 10px 10px;
     border: 1px solid gray;
     border-radius: 25px;
-    background-color: #d9c0e3;
+    background-color: #b8b7b5;
+    ;
     box-shadow: 0 0 10px 1px #0000009e;
+    margin-left: 50px;
 }
 
 .heroes-list-title {
@@ -52,9 +58,15 @@ button {
     flex-direction: column;
 }
 
-.pokemon-item {
-    width: 130px;
+.hero-item {
+    width: 170px;
+    height: 40px;
     margin: 2.5px 0 2.5px 0;
+    background-color: #e40002;
+    border-radius: 10px;
+    font-weight: 900;
+    color: white;
+    border: none;
 }
 
 .pagination-wrap,
@@ -80,13 +92,13 @@ button {
 .heroes-info-wrap {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 35%;
     height: 50%;
     margin: 15px 10px 0 10px;
     padding: 15px 10px 10px 10px;
     border: 1px solid gray;
     border-radius: 25px;
-    background-color: #d9c0e3;
+    background-color: #b8b7b5;
     box-shadow: 0 0 10px 1px #0000009e;
 }
 
@@ -94,8 +106,6 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    height: 50px;
 }
 
 .title {
@@ -103,10 +113,10 @@ button {
 
 }
 
-.pokemon-img {
-    width: 20%;
-    height: 285%;
-    margin-right: 60px;
+.hero-img {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
 }
 
 .pokemon-title {
@@ -119,85 +129,4 @@ button {
     justify-content: flex-start;
     flex-direction: column;
     margin-left: 50px;
-}
-
-/*Списки*/
-.search-wrap {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    padding: 8px;
-    margin: 15px 10px 0 20px;
-    border: 1px solid gray;
-    border-radius: 25px;
-    background-color: #d9c0e3;
-    box-shadow: 0 0 10px 1px #0000009e;
-}
-
-/*Список регионов*/
-.region-wrap {
-    display: flex;
-    flex-direction: column;
-    padding: 0 5px;
-}
-
-.region-list-wrap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.pagination-region-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-}
-
-/*Список типов*/
-.type-list-wrap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0 5px;
-}
-
-.search-item {
-    margin-bottom: 4px;
-}
-
-/*Избранный*/
-.active {
-    background-color: #dba1f2;
-}
-
-.pokemon-list-favorites-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 15%;
-    height: 80%;
-    margin: 15px 20px 0 10px;
-    padding: 15px 10px 10px 10px;
-    border: 1px solid gray;
-    border-radius: 25px;
-    background-color: #d9c0e3;
-    box-shadow: 0 0 10px 1px #0000009e;
-}
-
-.pokemon-list-favorites {
-    display: flex;
-    flex-direction: column;
-}
-
-/*Кнопки эволюции и выбора*/
-.pokemon-evo-btn,
-.favorite-btn {
-    width: 75%;
-    margin: 5px 0px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: #a3e4a1a0;
 }
