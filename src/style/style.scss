@@ -128,3 +128,16 @@ button {
     justify-content: flex-start;
     flex-direction: column;
 }
+
+@media screen and (max-height: 900px) {
+    .hero-item {
+        width: 170px;
+        padding: 3px 0;
+        margin: 2.5px 0 2.5px 0;
+        background-color: #e40002;
+        border-radius: 10px;
+        font-weight: 900;
+        color: white;
+        border: none;
+    }
+}
