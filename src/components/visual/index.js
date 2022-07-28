@@ -28,6 +28,38 @@ const init = ()=>{
     createP('div', "select-hero", '', pokemonInfo)
 }
 
+
+
+
+
+const heroButton = (tag, clas, text, element2, i)=>{
+    let element = document.createElement(tag)
+    element.className = clas
+    element.textContent = text
+    element2.append(element)
+    element.setAttribute('id', i)
+    if (i){
+    element.addEventListener('click', function(){
+        console.log('click')
+        api2 = "https://www.breakingbadapi.com/api/quotes",
+            fetch(api2)
+        .then(arg => arg.json())
+        .then(res => {
+            let phrases = []
+            phrases = res
+            console.log(phrases[i])
+            const quote = document.querySelector('.quote')
+            quote.textContent = ''
+            quote.textContent = phrases[i].quote
+
+            
+        })
+    })
+}
+}
+
+
+
 let url = 'http://gateway.marvel.com/v1/public/characters',
     ts = '1656951848714',
     apikey = '5d50797712e719c716a59c5134eb932d',
@@ -45,10 +77,10 @@ fetch(api)
     .then(res => {
         console.log(res.data.results)
         const heroList = document.querySelector('.heroes-list')
-        res.data.results.forEach(elem => createP('button', 'hero-item', `${elem.name}`, heroList))
-        res.data.results.forEach((el, i) => {
+        res.data.results.forEach((elem, i) => heroButton('button', 'hero-item', `${elem.name}`, heroList, i))
+        /* res.data.results.forEach((el, i) => {
             console.log(`${el.name} phrase: ${phrases[i].quote}`)
-        });
+        }); */
     })
 
 export {init}
